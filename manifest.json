@@ -1,0 +1,30 @@
+{
+  "name": "KissAnime Hide Ads",
+  "version": "1.0",
+  "description": "This Extension hide ads on kissanime.com",
+  "permissions": [
+    "bookmarks"
+  ],
+  "browser_action": {
+      "default_title": "KissAnime Hide Ads",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+   "content_scripts": [ {
+      "all_frames": true,
+	  "css": [ "style.css" ],
+      "matches": [ "http://www.kissanime.com/*", "http://kissanime.com/*", "http://*.kissanime.com/*" ],
+      "run_at": "document_start"
+   },{
+      "all_frames": false,
+	  "css": [ "style.css" ],
+      "matches": [ "http://www.kissanime.com/*", "http://kissanime.com/*", "http://*.kissanime.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

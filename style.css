@@ -1,0 +1,22 @@
+ 
+	#id adsIfrme1 {
+        display: none;
+    }
+	iframe {
+        display: none;
+    }
+	.divCloseBut {
+        display: none;
+    }
+	#divComments {
+        display: block;
+    }
+	#divAds, #divAds2 {
+        display: none;
+    }
+	#disqus_thread {
+        display: block;
+    }
+	#disqus_thread iframe {
+        display: block;
+    }                
